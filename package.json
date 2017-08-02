@@ -1,0 +1,70 @@
+{
+  "name": "mattermost",
+  "displayName": "Mattermost",
+  "description": "Send messages and code parts to Mattermost from Visual Studio Code",
+  "icon": "icon.png",
+  "version": "0.0.1",
+  "publisher": "devilop3rz",
+  "author": {
+      "name": "Marvin Ernst",
+      "email": "devilop3rz@gmail.com",
+      "url": "https://github.com/devilop3rz/"
+  },
+  "homepage": "https://github.com/devilop3rz/vscode-mattermost/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devilop3rz/vscode-mattermost"
+  },
+  "bugs": {
+    "url": "https://github.com/devilop3rz/vscode-mattermost/issues"
+  },
+  "galleryBanner": {
+      "color": "#FFFFFF",
+      "theme": "light"
+  },
+  "engines": {
+    "vscode": "^1.14.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+      "Mattermost",
+      "vscode",
+      "chat",
+      "communication",
+      "collaboration"
+  ],
+  "activationEvents": [
+    "onCommand:mattermost.sendSelection",
+    "onCommand:mattermost.sendMessage"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mattermost.sendMessage",
+        "title": "Mattermost: Send Message"
+      },{
+        "command": "mattermost.sendSelection",
+        "title": "Mattermost: Send Selection"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
