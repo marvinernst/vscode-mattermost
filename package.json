@@ -6,9 +6,9 @@
   "version": "0.0.1",
   "publisher": "devilop3rz",
   "author": {
-      "name": "Marvin Ernst",
-      "email": "devilop3rz@gmail.com",
-      "url": "https://github.com/devilop3rz/"
+    "name": "Marvin Ernst",
+    "email": "devilop3rz@gmail.com",
+    "url": "https://github.com/devilop3rz/"
   },
   "homepage": "https://github.com/devilop3rz/vscode-mattermost/blob/master/README.md",
   "repository": {
@@ -19,8 +19,8 @@
     "url": "https://github.com/devilop3rz/vscode-mattermost/issues"
   },
   "galleryBanner": {
-      "color": "#FFFFFF",
-      "theme": "light"
+    "color": "#FFFFFF",
+    "theme": "light"
   },
   "engines": {
     "vscode": "^1.14.0"
@@ -29,11 +29,11 @@
     "Other"
   ],
   "keywords": [
-      "Mattermost",
-      "vscode",
-      "chat",
-      "communication",
-      "collaboration"
+    "Mattermost",
+    "vscode",
+    "chat",
+    "communication",
+    "collaboration"
   ],
   "activationEvents": [
     "onCommand:mattermost.sendSelection",
@@ -45,7 +45,8 @@
       {
         "command": "mattermost.sendMessage",
         "title": "Mattermost: Send Message"
-      },{
+      },
+      {
         "command": "mattermost.sendSelection",
         "title": "Mattermost: Send Selection"
       }

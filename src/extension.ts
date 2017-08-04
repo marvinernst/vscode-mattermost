@@ -3,12 +3,14 @@
 import * as vscode from 'vscode';
 import * as request from 'request';
 
+var channelNames = [];
 
 const configuration = vscode.workspace.getConfiguration('mattermost');
 const channels = configuration.get('channels');
-const channelNames = channels.map((channel) => {
-    return channel.name;
-});
+for (var channel in channels) {
+    channelNames.push(channels[channel].name)
+}
+
 
 class Mattermost {
 
@@ -61,7 +63,7 @@ class Mattermost {
         var selection = editor.selection;
 
         var data = {
-            text: '``` \n' + editor.document.getText(selection) + '\n```';
+            text: '``` \n' + editor.document.getText(selection) + '\n```'
         };
 
         this.SelectChannel(data);
@@ -69,13 +71,13 @@ class Mattermost {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-    if (channels.length > 0) {
+    if (channels) {
         let mattermost = new Mattermost();
 
-        vscode.commands.registerCommand('mattermost.sendSelection', () => mattermost.SendSelection());
-        vscode.commands.registerCommand('mattermost.sendMessage', () => mattermost.SendMessage());
+        var sendSelection = vscode.commands.registerCommand('mattermost.sendSelection', () => mattermost.SendSelection());
+        var sendMessage = vscode.commands.registerCommand('mattermost.sendMessage', () => mattermost.SendMessage());
 
-        context.subscriptions.push(mattermost);
+        context.subscriptions.push(sendSelection, sendMessage);
     } else {
         vscode.window.showErrorMessage('Please enter a valid hook url to use this extension');
     }
