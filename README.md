@@ -9,9 +9,9 @@ https://marketplace.visualstudio.com/items/devilop3rz.mattermost
 This extension is not created by, affiliated with, or supported by Mattermost, Inc.
 
 ### Installation
-You can install this extension by pressing F1 in Visual Studio Code, then typing "ex install" and selecting it from the list.
+You can install this extension by opening the extensions panel in Visual Studio Code, then searching for "mattermost" and selecting it from the list.
 
-### Configuration
+### Configuration1
 Go to User Settings (File > Preferences > User Settings) and add the following 
 ```
   "mattermost.channels": {
