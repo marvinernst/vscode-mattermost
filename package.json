@@ -3,7 +3,7 @@
   "displayName": "Mattermost",
   "description": "Send messages and code parts to Mattermost from Visual Studio Code",
   "icon": "icon.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "devilop3rz",
   "author": {
     "name": "Marvin Ernst",
